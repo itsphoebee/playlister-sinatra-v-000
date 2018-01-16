@@ -6,16 +6,11 @@
   <br></br>
   <label>Select genre(s):</label>
   <%Genre.all.each do |genre|%>
-  <input id="<%=genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>"><%=genre.name%></input>
+  <input id="<%=genre.name%>" type="checkbox" name="genres[]" value="<%=genre.id%>"><%=genre.name%></input>
   <%end%>
   <br></br>
-  Choose an existing artist
-  <%Artist.all.each do |artist|%>
-  <input id="<%=artist.name %>" type="radio" name="artist[name]" value="<%= artist.id %>"><%=artist.name%></input>
-  <%end%>
-  <br></br>
-  or create a new one
-  Artist Name: <input type="text" name="artist[name]" id="Artist Name"></input>
+  <label>Artist Name:</label>
+  <input type="text" name="artist[name]" id="Artist Name"></input>
   <br></br>
   <input type="submit" value="Create Song">
 </form>
