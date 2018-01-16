@@ -1,9 +1,9 @@
 <h1>Edit song:</h1>
  <form action="/songs/<%=@song.slug%>" method="post">
-
-<p><label>Name: </label>
-<input type="text" name="song[name]" id="Name" value="<%= @song.name %>"></p>
-<p><label>Artist: </label>
+   <label>Name: </label>
+   <input type="text" name="song[name]" id="Name" value="<%= @song.name %>"></p>
+   <br></br>
+<label>Artist: </label>
    <input type="text" name="artist[name]" id="Artist Name" value="<%= @song.artist.name %>"></p>
 
    <h3>Select genre(s)</h3>
