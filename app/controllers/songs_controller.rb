@@ -16,12 +16,8 @@ class SongsController < ApplicationController
     binding.pry
     @song = Song.create(params[:song])
     @song.artist = Artist.find_or_create_by(name:params[:artist][:name])
-    if !!artist
-      @song.artist = artist
-    else
-      @song.artist = Artist.create(name:params[:artist][:name])
-      @song.save
-    end
+    @song.save
+
     #flash[:message] = "Successfully created song."
     redirect to("/songs/#{@song.slug}")
   end
