@@ -13,7 +13,6 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    binding.pry
     @song = Song.create(name:params[:name])
     genre = Genre.find(params[:song][:genres])
     artist = Artist.find_by(name:params[:artist][:name])
