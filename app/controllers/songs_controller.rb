@@ -15,7 +15,7 @@ class SongsController < ApplicationController
   post '/songs' do
     binding.pry
     @song = Song.create(params[:song])
-    artist = Artist.find_or_create_by(name:params[:artist][:name])
+    @song.artist = Artist.find_or_create_by(name:params[:artist][:name])
     if !!artist
       @song.artist = artist
     else
