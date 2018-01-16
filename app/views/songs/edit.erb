@@ -1,5 +1,5 @@
 <h1>Edit song:</h1>
- <form action="/songs/<%= @song.slug %>" method="post">
+ <form action="/songs/<%=@song.slug%>" method="post">
 
 <p><label>Name: </label>
 <input type="text" name="song[name]" id="Name" value="<%= @song.name %>"></p>
